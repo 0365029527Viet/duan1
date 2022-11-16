@@ -1,0 +1,1 @@
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="text-center">Bình luận</h2>
