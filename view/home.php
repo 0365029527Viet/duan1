@@ -9,7 +9,7 @@
                             <a href="#">Deal hôm nay</a>
                         </li>
                         <li>
-                            <a href="#">Tất cả</a>
+                            <a href="review/tatca.php">Tất cả</a>
                         </li>
                         <li>
                             <a href="review/doan.php" target="review">Đồ ăn</a>
@@ -21,14 +21,14 @@
                             <a href="review/trangmieng.php" target="review">Đồ chay</a>
                         </li>
                         <li>
-                            <a href="#" target="review">Bánh kem</a>
+                            <a href="review/banhkem.php" target="review">Bánh kem</a>
                         </li>
                         <li>
-                            <a href="#" target="review">Tráng miệng</a>
+                            <a href="review/trangmieng.php" target="review">Tráng miệng</a>
                         </li>
                     </ul>
                 </div>
-                <iframe src="review/doan.php" frameborder="0" name="review" width="100%" height="500px" class="iframe" style="background-color: #EEEEEE;"></iframe>
+                <iframe src="review/tatca.php" frameborder="0" name="review" width="100%" height="500px" class="iframe" style="background-color: #EEEEEE;"></iframe>
                 <?php ?>
             </div>
         </div>

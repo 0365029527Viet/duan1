@@ -45,7 +45,8 @@
                     include "taikhoan/quenmk.php";
                     break;
                 case 'doan':
-                    include "view/doan.php";
+                    
+                    include "review/trangmieng.php";
                     break;
                 default:
                     include "view/home.php";

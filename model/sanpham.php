@@ -37,12 +37,12 @@
         $resufl = pdo_query($sql);
         return $resufl;
     }
-    function loadall_tk(){
-        $sql = "select danhmuc.id as madm, danhmuc.tendanhmuc as tendm, count(sanpham.id) as countsp, min(sanpham.gia) as mingia ,max(sanpham.gia) as maxgia, avg(sanpham.gia) as giatb from sanpham left join danhmuc on danhmuc.id=sanpham.iddm
-        group by danhmuc.id desc";
-        $listtk = pdo_query($sql);
-        return $listtk;
-    }
+    // function loadall_tk(){
+    //     $sql = "select danhmuc.id as madm, danhmuc.tendanhmuc as tendm, count(sanpham.id) as countsp, min(sanpham.gia) as mingia ,max(sanpham.gia) as maxgia, avg(sanpham.gia) as giatb from sanpham left join danhmuc on danhmuc.id=sanpham.iddm
+    //     group by danhmuc.id desc";
+    //     $listtk = pdo_query($sql);
+    //     return $listtk;
+    // }
     
     
     ?>
