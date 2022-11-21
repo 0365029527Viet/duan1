@@ -15,6 +15,18 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
+    <style>
+        .item a{
+            position: absolute;
+            transform: translate(75%);
+            opacity: 0;
+            transition: 0.9 all;
+        }
+        .item:hover a{
+            top: 25%;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -27,9 +39,14 @@
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-bottom: 20px;">
                 
                  <div class="card" style="background-color: #bababa;">
-                    <img class="card-img-top img-responsive" src="../admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="Card image cap">
+                    <div class="item">
+                        <img class="card-img-top img-responsive" src="../admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="Card image cap">
+                        <a href="" class="btn btn-default">Đặt hàng 
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        </a>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title" style="margin-left: 5px;"><b><p><a href="chitietsp.html" target="chitiet" style=""><?php echo $value['tensp'] ?></a></p></b></h5>
+                        <h5 class="card-title" style="margin-left: 5px;"><b><p style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);"><a href="" target="chitiet" style=""><?php echo $value['tensp'] ?></a></p></b></h5>
                         <p class="card-text" style="color: #858585; padding-bottom: 0px;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);"><?php echo $value['diachi'] ?></p>
                         <p class="text-center">Chỗ này của bình luận</p> <hr>
                             <div class="row">    

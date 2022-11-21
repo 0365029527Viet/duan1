@@ -9,7 +9,7 @@
                             <a href="#">Deal hôm nay</a>
                         </li>
                         <li>
-                            <a href="review/tatca.php">Tất cả</a>
+                            <a href="review/tatca.php" target="review">Tất cả</a>
                         </li>
                         <li>
                             <a href="review/doan.php" target="review">Đồ ăn</a>

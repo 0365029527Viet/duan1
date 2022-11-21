@@ -43,7 +43,7 @@
                     <div class="row">
                         
                         <div class="col-xs-10 col-sm-10 col-md-12 col-lg-12">
-                            <iframe src="review/doan.php" frameborder="0" width="100%" height="700px" name="khampha"></iframe>
+                            <iframe src="review/tatca.php" frameborder="0" width="100%" height="700px" name="khampha"></iframe>
                         </div>
                         
                     </div>
