@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,13 +31,16 @@
             margin: 0 auto;
             width: 500px;
         }
+        .container-fluid{
+            height: 100%;
+        }
         .menu{
             background-color: rgb(212, 212, 212);
-            height: 1500px;
+            height: 1000px;
         }
         .home{
             background-color: #fff;
-            height: 1500px;
+            height: 1000px;
         }
         .banner{
             height: 130px;
@@ -49,7 +52,27 @@
             padding: 50px;
             min-height: 50px;
         }
-
+        .admin{
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+        }
+        .danhmuc{
+            width: 100%;
+            height: 100px;
+            background-color: #C4E538;
+            color: white;
+        }
+        .danhmuc h3{
+            margin-left: 10px;
+        }
+        .chitiet{
+            background-color: #FFC312;
+        }
+        .chitiet a{
+            color: #fff;
+        }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -69,11 +92,22 @@
                         <img src="../image/White_Black_Friday_Sale_Modern_Canvas_Banner-removebg-preview.png" class="img-responsive" alt="Image">
                     </div>
                     
-                </div>
+                </div> <hr>
+                <div class="row" class="name">
+                    <img src="../image/user-default-female.png" alt="" class="admin">
+                    <?php
+                        if(isset($_SESSION['user'])){
+                            extract($_SESSION['user']);
+                            echo "".$name;
+                        }else{
+                            header("location: ../indexAll.php");
+                        }
+                    ?>
+                </div> <hr>
                <div class="row">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#"> 
+                            <a class="nav-link active" href="index.php?act=home"> 
                             <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                              Home</a>
                             </li>
@@ -112,10 +146,50 @@
             </div>
             
             <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home">
+            <div class="row">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Admin</a>
+                    </div>
+                
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <?php
+                                if(isset($_SESSION['user'])){
+                                    echo "<li><a href='../indexAll.php?act=dangxuat'>Đăng xuất <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span></a></li>";
+                                }
+                            ?>
+                            
+                        
+                    </ul>
+                    </div>
+                </nav>
+                
+            </div>
             <?php
                 include "header.php";
             ?>
             </div>
+            
+            
             
             
         </div>

@@ -1,6 +1,3 @@
-<!-- <?php
-    include "../model/taikhoan.php";
-?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,30 +59,23 @@
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <div class="row home">
             <div class="login">
-                <h1 class="text-center">Login</h1> <hr>
+                <h1 class="text-center">Quên mật khẩu</h1> <hr>
                 <form action="indexAll.php?act=dangnhap" method="post">
                     <div class="input-group">
                         <label>Email</label> <br>
                         <i class="glyphicon glyphicon-envelope"></i>
                         <input type="text" placeholder="Nhập email" name="email">
                     </div>
-                    <div class="input-group">
-                        <label>Pass</label> <br>
-                        <i class="glyphicon glyphicon-eye-close"></i>
-                        <input type="password" placeholder="Nhập password" name="pass">
-                    </div>
-                    
                     <br> <br>
                     
                     <div class="input-group">
-                        <button type="submit" class="btn btn-success" name="dangnhap">Đăng nhập</button>
+                        <button type="submit" class="btn btn-success" name="dangnhap">Lấy lại mật khẩu</button>
                     </div>
                     <br>
-                <p style="margin-left: 100px;">Bạn chưa có tài khoản? <a href="indexAll.php?act=dangki">Đăng kí</a> ngay.</p>
-                <p><a href="indexAll.php?act=quenmk" style="margin-left: 100px;">Quên mật khẩu</a>?</p>
+                <p style="margin-left: 100px;"><a href="indexAll.php?act=dangki">Đăng nhập</a></p>
                     
                 </form> 
 
@@ -125,5 +115,5 @@
             Số giấy phép ĐKKD: 0311828036 do sở Kế hoạch và Đầu Tư TPHN cấp ngày 11/06/2012
         </p>
     </div>
-</body>
+    </body>
 </html>

@@ -1,10 +1,10 @@
 <?php
 
 
-    // function insert_tk($user,$pass,$email,$diachi,$phone){
-    //     $sql ="insert into taikhoan(user,pass,email,diachi,phone) values ('$user','$pass','$email','$diachi','$phone')";
-    //     pdo_execute($sql);
-    // }
+    function insert_tk($hoten,$pass,$email,$phone,$adress){
+        $sql ="insert into taikhoan(name,pass,email,phone,address) values ('$hoten','$pass','$email','$phone','$adress')";
+        pdo_execute($sql);
+    }
     function login($email,$pass){
         $sql = "select * from taikhoan where email = '$email' AND pass = '$pass'";
         $dn = pdo_query_one($sql);

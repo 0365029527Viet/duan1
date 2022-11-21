@@ -52,12 +52,13 @@
                              <?php
                                 if(isset($_SESSION['user'])){
                                     extract($_SESSION['user']);
-                                    // if($role = 1){
-                                    //     header('location : admin/index.php');
-                                    // }else{
-                                    //     echo " xin chao";
-                                    // }
-                                    echo ""."<a href=''>$name <img src='image/user-default-female.png' style='border-radius: 50%;' width='30' height='30'></a>";
+                                    if($role == 1){                                             
+                                        echo "Hello";
+                                        header("location: admin/index.php");
+                                    }else{
+                                        echo ""."<a href=''>$name <img src='image/user-default-female.png' style='border-radius: 50%;' width='30' height='30'></a>";
+                                    }
+                                    
                                 }else{
                                     echo "<a href='indexAll.php?act=dangnhap'>Đăng nhập</a>";
                                 }
@@ -66,7 +67,7 @@
                             <li>
                                 <?php
                                     if(isset($_SESSION['user'])){
-                                        echo "<a href='indexAll.php?act=dangnhap'>Đăng xuất</a>";
+                                        echo "<a href='indexAll.php?act=dangxuat'>Đăng xuất</a>";
                                     }
                                 ?>
 

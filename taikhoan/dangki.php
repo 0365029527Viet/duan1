@@ -63,37 +63,37 @@
         <div class="row home">
             <div class="login">
                 <h1 class="text-center">Đăng kí</h1> <hr>
-                <form action="" method="post">
+                <form action="" method="post" enctype="multipart/form-data">
                 <div class="input-group">
                         <label>Họ tên</label> <br> 
                         <i class="glyphicon glyphicon-user"></i>
-                        <input type="text" placeholder="Nhập họ và tên">
+                        <input type="text" placeholder="Nhập họ và tên" name="hoten">
                     </div>
                     <div class="input-group">
                         <label>Số điện thoại</label> <br> 
                         <i class="glyphicon glyphicon-phone"></i>
-                        <input type="text" placeholder="Nhập số điện thoại">
+                        <input type="text" placeholder="Nhập số điện thoại" name="phone">
                     </div>
                     <div class="input-group">
                         <label>Email</label> <br>
                         <i class="glyphicon glyphicon-envelope"></i>
-                        <input type="text" placeholder="Nhập email">
+                        <input type="text" placeholder="Nhập email" name="email">
                     </div>
                     <div class="input-group">
                         <label>Địa chỉ</label> <br>
                         <i class="glyphicon glyphicon-home"></i>
-                        <input type="text" placeholder="Nhập địa chỉ">
+                        <input type="text" placeholder="Nhập địa chỉ" name="adress">
                     </div>
                     <div class="input-group">
                         <label>Pass</label> <br>
                         <i class="glyphicon glyphicon-eye-close"></i>
-                        <input type="password" placeholder="Nhập password">
+                        <input type="password" placeholder="Nhập password" name="pass">
                     </div>
                     
                     <br> <br>
                     
                     <div class="input-group">
-                        <button type="submit" class="btn btn-success">Đăng kí ngay</button>
+                        <button type="submit" class="btn btn-success" name="dangki">Đăng kí ngay</button>
                     </div>
                     
                     

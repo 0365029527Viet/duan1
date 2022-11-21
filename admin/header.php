@@ -1,4 +1,5 @@
 <?php
+                // session_start();
                 include "../model/pdo.php";
                 include "../model/danhmuc.php";
                 include "../model/sanpham.php";
@@ -92,6 +93,10 @@
                         case 'thongke':
                             include "thongke.php";
                             break;
+                        // case 'dangxuat':
+                        //     session_unset();
+                        //     header("location: ../indexAll.php");
+                        //     break;
                         default:
                             include "home.php";
                             break;
