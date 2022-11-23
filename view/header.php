@@ -20,7 +20,6 @@
     <div class="container-fluid">
         <div class="row">
             <!-- nav -->
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <nav class="navbar navbar-default" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -56,7 +55,7 @@
                                         echo "Hello";
                                         header("location: admin/index.php");
                                     }else{
-                                        echo ""."<a href=''>$name <img src='image/user-default-female.png' style='border-radius: 50%;' width='30' height='30'></a>";
+                                        echo ""."<a href='index.php?act=trangcanhan'>$name <img src='image/user-default-female.png' style='border-radius: 50%;' width='30' height='30'></a>";
                                     }
                                     
                                 }else{
@@ -82,13 +81,8 @@
                         </ul>
                     </div>
                     <!-- banner -->
-                    <div class="banner">
-                        <img src="image/foody-675x355_foodyappbanner-636530746968443602.jpg" alt="" class=" center-block">
-                        <p class="text-center">Foody app trên mobie <br>
-                                            Khám phá, đặt bàn, giao tận nơi</p>
-                    </div>
+                    
                 </nav>
-            </div>
         </div>    
     </div>
     

@@ -3,6 +3,7 @@
     include "model/pdo.php";
     include "model/taikhoan.php";
     include "view/header.php";
+    include "view/banner.php";
     if(isset($_GET['act'])){
         $act = $_GET['act'];
             switch ($act) {
@@ -44,9 +45,9 @@
                 case 'quenmk':
                     include "taikhoan/quenmk.php";
                     break;
-                case 'doan':
+                case 'chitiet':
                     
-                    include "review/trangmieng.php";
+                    include "view/chitietsp.php";
                     break;
                 default:
                     include "view/home.php";

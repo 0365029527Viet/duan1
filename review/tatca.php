@@ -16,7 +16,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
     <style>
-        .item a{
+        /* .item a{
             position: absolute;
             transform: translate(75%);
             opacity: 0;
@@ -25,7 +25,7 @@
         .item:hover a{
             top: 25%;
             opacity: 1;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -41,13 +41,15 @@
                  <div class="card" style="background-color: #bababa;">
                     <div class="item">
                         <img class="card-img-top img-responsive" src="../admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="Card image cap">
-                        <a href="" class="btn btn-default">Đặt hàng 
+                        <!-- <a href="" class="btn btn-default">Đặt hàng 
                         <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                        </a>
+                        </a> -->
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title" style="margin-left: 5px;"><b><p style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);"><a href="" target="chitiet" style=""><?php echo $value['tensp'] ?></a></p></b></h5>
-                        <p class="card-text" style="color: #858585; padding-bottom: 0px;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);"><?php echo $value['diachi'] ?></p>
+                        <h5 class="card-title" style="margin-left: 5px;"><b><p style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);"><a href='../index.php?act=chitiet&&id=<?php echo $value['id']; ?>' target='chitiet'>
+                            <?php echo $value['tensp'] ?>
+                        </a></p></b></h5>
+                        <p class='card-text' style='color: #858585; padding-bottom: 0px;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);'><?php echo $value['diachi'] ?></p>
                         <p class="text-center">Chỗ này của bình luận</p> <hr>
                             <div class="row">    
                                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="margin-left: 5px;">
