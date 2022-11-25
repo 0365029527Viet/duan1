@@ -121,9 +121,13 @@
                    </div>                 
             </div>
             
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="background-color: #fff; margin: 0 10px 10px 30px;">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" id="binhluan" style="background-color: #fff; margin: 0 10px 10px 30px;">
                 <h3 class="text-center">Bình luận</h3>
-            </div>
+            </div><script>
+                $(document).ready(function(){                        
+                    $("#binhluan").load("view/binhluan/binhluanform.php", {idpro: <?=$id?>});
+                });
+            </script>
             
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <div class="comment text-center">
