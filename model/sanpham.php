@@ -23,7 +23,7 @@
         //load sản phẩm mới nhất
     }
     function load_sp_limit(){
-        $sql = "select * from spReview order by id desc limit 6";
+        $sql = "select * from spReview limit 10";
         $resufl = pdo_query($sql);
         return $resufl;
         //load 6 sản phẩm mới nhất 

@@ -57,7 +57,6 @@
         <div class="row">
             
            <?php
-                // $resuft = load_one_sp($id);
                 foreach ($resuft as $key => $value) {
                     
                 
@@ -73,28 +72,7 @@
                     <p><?php echo $value['khuvuc'] ?></p>
                     <b><h3><?php echo $value['tensp'] ?></h3></b>
                     <p>
-                        <div class="row">
-                            
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="margin-top: 10px;">
-                                <span><?php echo $value['tongdiem'] ?></span>
-                            </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <b><?php echo $value['diemvitri'] ?></b> <br> Vị trí
-                            </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <b><?php echo $value['diemgiaca'] ?></b> <br> Giá cả
-                            </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <b><?php echo $value['diemkhonggia'] ?></b> <br> Không gian
-                            </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <b><?php echo $value['diemchatluong'] ?></b> <br> Chất lượng
-                            </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <b><?php echo $value['diemphucvu'] ?></b> <br> Phục vụ
-                            </div>
-                            
-                        </div>
+                        
                     </p>
                     <p style="font-size: 17px;">
                     <b class="glyphicon glyphicon-pushpin" aria-hidden="true"></b> <?php echo $value['diachi'] ?>
@@ -105,9 +83,12 @@
                     <p style="font-size: 17px;">
                         <b class="glyphicon glyphicon-tag"></b> <?php echo $value['gia'] ?>
                     </p>
+                    
+                    <input type="number" name="" id="input" class="form-control" value="" required="required" placeholder="số lượng sản phẩm">
+                    
                 </div>
                </div>
-               
+               <?php  } ?>
            </div>
     </div> <br>
     <div class="container">
@@ -115,9 +96,9 @@
             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                    <div class="row">
                    <div class="list-group">
-                        <a href="indexAll.php" class="list-group-item text-center">Trang chủ</a>
-                        <a class="btn btn-primary list-group-item" data-toggle='modal' href='#modal-id'>Bình Luận</a>
-                        <a href="#" class="list-group-item text-center">Sản phẩm khác</a>
+                        <a href="indexAll.php" class="list-group-item">Trang chủ</a>
+                        <a href="#" class="list-group-item">Bình luận</a>
+                        <a href="#" class="list-group-item">Sản phẩm khác</a>
                     </div>  
                    </div>                 
             </div>
@@ -127,46 +108,25 @@
             </div>
             
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-            <div class="modal fade" id="modal-id">
-                <div class="modal-dialog">
-                    <div class="modal-content"  style="width: 900px;">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Viết bình luận</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                                        <div class="row">
-                                        <img src="admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="" width="100%" height="200">
-                                        <b><h4 style="color: green;"><?php echo $value['tensp'] ?></h4></b>
-                                        <p style="color: green;"><?php echo $value['diachi'] ?></p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                                        <textarea name="" id="" cols="65" rows="20" placeholder="Nhận xét......"></textarea>
-
-                                        
-                                    </div>
-                                </div>
+                <div class="comment text-center">
+                    <div class="input-group">
+                
+                        <div class="input-group">
+                            
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">Go!</button>
+                                </span>
                             </div>
                             
-                            
-                            
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Hoàn tất</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
             
-            </div>
             
-            <?php  } ?>
             
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <iframe src="" frameborder="0" width="100%" height="500px"></iframe>

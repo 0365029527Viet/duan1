@@ -14,6 +14,13 @@
                     }
                     include "view/chitietsp.php";
                     break;
+                case 'chitietshop':
+                    if(isset($_GET['id'])&&($_GET['id'])>0){
+                        $id = $_GET['id'];
+                        $resuft = load_one_sp($id);
+                    }
+                    include "view/chitietshop.php";
+                    break;
                 case 'trangcanhan':
 
                     include "profile/trangcanhan.php";
