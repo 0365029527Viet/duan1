@@ -69,3 +69,6 @@ body{
 .footer ul li{
     list-style: none;
 }
+.ngang{
+    display: flex;
+}

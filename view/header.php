@@ -121,7 +121,7 @@
                                 
                                 extract($_SESSION['user']);
                                 if ($role == 1) {
-                                    header("location: admin/index.php");
+                                    header('location: admin/index.php');
                                 } else {
                                     echo "<a href='index.php?act=trangcanhan'>$name" . " " . "<img src='image/$img' style='border-radius: 50%;' width='30' height='30'></a>";
                                 }

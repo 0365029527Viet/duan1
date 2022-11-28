@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     session_start();
     include "model/pdo.php";
     include "model/taikhoan.php";
@@ -13,12 +14,13 @@
                         $email = $_POST['email'];
                         $pass = $_POST['pass'];
                         $checkuser= login($email,$pass);
+                        
                         if(is_array($checkuser)){
                             $_SESSION['user'] = $checkuser;
-                            // header("location : indexAll.php");
-                            // echo "<script>alert('Đang nhập thành công.')</script>";
+                            header('location:indexAll.php'); 
+                            echo "<script>alert('Đang nhập thành công.')</script>";
                             
-                            
+                            die;
                         }
                         else{
                             echo "<script>alert('Tài khoản không tồn tại.')</script>";
