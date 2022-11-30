@@ -16,12 +16,13 @@
                             $_SESSION['user'] = $checkuser;
                             echo "<script>alert('Đang nhập thành công.')</script>";
                             header('location: indexAll.php');
-                            
+                            die;
                         }
                         else{
                             echo "<script>alert('Tài khoản không tồn tại.')</script>";
                         }
                     }
+                  
                     include "taikhoan/dangnhap.php";
                     break;
                 case 'dangki':

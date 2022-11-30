@@ -50,7 +50,7 @@
                             <?php echo $value['tensp'] ?>
                         </a></p></b></h5>
                         <p class='card-text' style='color: #858585; padding-bottom: 0px;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: rgb(104, 104, 104);'><?php echo $value['diachi'] ?></p>
-                        <p class="text-center">Chỗ này của bình luận</p> <hr>
+                        <a href="binhluan.php" style="color: black"><p class="text-center">Chỗ này của bình luận</p></a> <hr>
                             <div class="row">    
                                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="margin-left: 5px;">
                                     <b class="glyphicon glyphicon-comment">11</b>

@@ -72,12 +72,13 @@
                         <?php
                             }else{ 
                         ?>
-                            <h1 style="color: red; text-align: center;">Vui lòng đăng nhập để được bình luận !</h1>         
+                            <a href=""><h1 style="color: red; text-align: center;">Vui lòng đăng nhập để được bình luận !</h1>  </a>       
                         <?php } ?>
             
         </div>
 
         <?php 
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
             if(isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])){
                 $noidung = $_POST['noidung'];
                 $idpro = $_POST['idpro'];
@@ -86,9 +87,10 @@
                 insert_binhluan($noidung, $iduser, $idpro, $ngaybinhluan);
                 header("location: ".$_SERVER['HTTP_REFERER']);
             }
+            
         ?>
     </div>
-    <!-- doannvph27169 -->
+    
     
 </body>
 </html>
