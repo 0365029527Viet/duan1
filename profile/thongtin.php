@@ -1,3 +1,7 @@
+<?php
+    include "../model/pdo.php";
+    include "../model/taikhoan.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,20 +27,39 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1 class="text-center">Thông tin cá nhân</h1>
+                <?php 
+                    session_start();
+                    if(isset($_SESSION['user'])){
+                        extract($_SESSION['user']);
+                    
+                ?>  
                 <form action="" method="post">
-                    <label>Họ và tên</label>
-                    <input type="text" name="" id="input" class="form-control" value="" required="required">
-                    <label>Email</label>
-                    <input type="text" name="" id="input" class="form-control" value="" required="required">
-                    <label>Số điện thoại</label>
-                    <input type="text" name="" id="input" class="form-control" value="" required="required">
-                    <label>Địa chỉ</label>
-                    <input type="text" name="" id="input" class="form-control" value="" required="required">
-                    <label>Mô tả bản thân</label>
-                    <textarea name="" id="input" class="form-control" rows="3" required="required"></textarea> <br>
-                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
-                </form>
                 
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <label>Họ và tên</label>
+                    <input type="text" name="name" id="input" class="form-control" value="<?php echo $name; ?>" required="required">
+                    <label>Email</label>
+                    <input type="text" name="email" id="input" class="form-control" value="<?php echo $email; ?>" required="required" disabled>
+                    <label>Số điện thoại</label>
+                    <input type="text" name="phone" id="input" class="form-control" value="<?php echo $phone; ?>" required="required">
+                    <label>Địa chỉ</label>
+                    <input type="text" name="diachi" id="input" class="form-control" value="<?php echo $address; ?>" required="required">
+                    <label>Mô tả bản thân</label>
+                    <textarea name="mota" id="input" class="form-control" rows="3" required="required"><?php echo $mota; ?></textarea> <br>
+                    <button type="submit" class="btn btn-primary" name="update_profile">Lưu thay đổi</button>
+                </form>
+                <?php } ?>
+                <?php
+                    if(isset($_POST['update_profile'])){
+                        $id = $_POST['id'];
+                        $name = $_POST['name'];
+                        $phone = $_POST['phone'];
+                        $diachi = $_POST['diachi'];
+                        $mota = $_POST['mota'];
+                        update_tk($id,$name,$phone,$diachi,$mota);
+                        echo "cap nhat thanh cong";
+                    }
+                ?>
             </div>
         </div>
         

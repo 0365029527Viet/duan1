@@ -21,26 +21,31 @@
         <div class="row">
             
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <div class="row" style="border: 1px solid black;">
-                    <img src="image/user-default-female.png" alt="" width="130" height="130" class="center-block" style="margin-top: 20px; border-radius: 50%;">
-                    <h2 class="text-center">
-                        Phạm Văn Việt
-                    </h2> <br> <br>
+                <?php 
+                    if(isset($_SESSION['user'])){
+                        extract($_SESSION);
                     
+                ?>
+                <div class="row" style="border: 1px solid black;">
+                    <img src="profile/image/<?php echo $img; ?>" alt="" width="130" height="130" class="center-block" style="margin-top: 20px; border-radius: 50%;">
+                    <h2 class="text-center">
+                        <?php echo $name; ?>
+                    </h2> <br> <br>
+                    <?php } ?>
                     <div class="list-group">
-                        <a href="#" class="list-group-item" target="profile">
+                        <a href="" class="list-group-item" target="profile">
                         <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                             Đơn hàng của bạn</a>
-                        <a href="thongtin.php" class="list-group-item" target="profile">
+                        <a href="profile/thongtin.php" class="list-group-item" target="profile">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                             Thông tin cơ bản</a>
-                        <a href="#" class="list-group-item" target="profile">
+                        <a href="" class="list-group-item" target="profile">
                         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                             Đổi mật khẩu</a>
-                        <a href="anhdaidien.html" class="list-group-item" target="profile">
+                        <a href="profile/avatar.php" class="list-group-item" target="profile">
                         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
                             Thay đổi ảnh đại diện</a>
-                        <a href="#" class="list-group-item" target="profile">
+                        <a href="" class="list-group-item" target="profile">
                         <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                             Đăng xuất</a>
                     </div>

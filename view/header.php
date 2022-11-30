@@ -70,12 +70,14 @@
                 max-width: 20%;
             }
         }
-        .shop{
+
+        .shop {
             position: absolute;
             left: 25%;
             opacity: 0;
         }
-        .item:hover .shop{
+
+        .item:hover .shop {
             opacity: 1;
             top: 15%;
         }
@@ -112,23 +114,29 @@
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
-
+                        <!--  -->
 
                         <li>
                             <?php
-                            if (isset($_SESSION['user'])) {
 
-                                
+                            if (isset($_SESSION['user'])) {
                                 extract($_SESSION['user']);
                                 if ($role == 1) {
                                     header('location: admin/index.php');
                                 } else {
-                                    echo "<a href='index.php?act=trangcanhan'>$name" . " " . "<img src='image/$img' style='border-radius: 50%;' width='30' height='30'></a>";
+                                    $row = load_tk($id);
+                                    
+                                    echo "<a href='index.php?act=trangcanhan'>$name " . "  " ."<img src='profile/image/"."$img' style='border-radius: 50%;' width='30' height='30'></a>";
                                 }
+                                
                             } else {
                                 echo "<a href='indexAll.php?act=dangnhap'>Đăng nhập</a>";
                             }
-                            ?>
+                            // foreach ($row as $key => $value) {
+                            //     echo "<pre>";
+                            //     print_r($value);
+                            // }
+                            // ?>
                         </li>
                         <li>
                             <?php

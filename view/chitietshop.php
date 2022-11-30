@@ -76,7 +76,6 @@
                     </div>
 
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <br>
                         <p><?php echo $value['khuvuc'] ?></p>
                         <b>
                             <h3><?php echo $value['tensp'] ?></h3>
@@ -87,15 +86,20 @@
                         <p style="font-size: 17px;">
                             <b class="glyphicon glyphicon-pushpin" aria-hidden="true"></b> <?php echo $value['diachi'] ?>
                         </p>
+                        <p>
+                            <a href="index.php?act=chitiet&&id=<?php echo $value['id'] ?>"> 
+                            <b class="glyphicon glyphicon-pencil" aria-hidden="true"></b>
+                             Xem nhận xét về sản phẩm</a>
+                        </p>
                         <p style="font-size: 17px;">
                             <b class="glyphicon glyphicon-time" aria-hidden="true"></b> <?php echo $value['opentime'] ?> - <?php echo $value['closetime'] ?>
                         </p>
                         <p style="font-size: 17px;">
                             <b class="glyphicon glyphicon-tag"></b> <?php echo $value['gia'] ?>
                         </p>
-
-                        <input type="number" name="" id="input" class="form-control" value="" required="required" placeholder="số lượng sản phẩm">
-
+                        <p>
+                            <a href="" class="btn btn-primary text-center">Đặt hàng</a>
+                        </p>
                     </div>
                 </div>
             <?php  } ?>
@@ -113,55 +117,8 @@
                 </div>
             </div>
 
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="background-color: #fff; margin: 0 10px 10px 30px;">
-                <h3 class="text-center">Bình luận</h3>
-            </div>
-
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <div class="comment text-center">
-                    <div class="input-group">
-                        <div class="modal fade" id="modal-id">
-                            <div class="modal-dialog">
-                                <div class="modal-content" style="width: 900px;">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title">Viết nhận xét</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="container-fluid">
-                                            <div class="row">
-
-                                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="row">
-                                                    <img src="admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="" width="100%" height="200">
-                                                    <b>
-                                                        <h4 style="color: green;"><?php echo $value['tensp'] ?></h4>
-                                                    </b>
-                                                    <p style="font-size: 17px; color: green;">
-                                                         <?php echo $value['diachi'] ?>
-                                                    </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                                    <textarea name="" id="" cols="65" rows="20"></textarea>
-                                                </div>
-                                                
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Hoàn tất</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+               
             </div>
 
 

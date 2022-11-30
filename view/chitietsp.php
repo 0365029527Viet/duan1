@@ -142,41 +142,97 @@
                         <div class="modal-content" style="width: 900px;">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Viết bình luận</h4>
+                                <h4 class="modal-title">Đánh giá và nhận xét</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                                             <div class="row">
-                                                <img src="admin/admin_review/sanpham/img/<?php echo $vaưlue['anh'] ?>" alt="" width="100%" height="200">
+                                                <img src="admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="" width="100%" height="200">
                                                 <b>
                                                     <h4 style="color: green;"><?php echo $value['tensp'] ?></h4>
                                                 </b>
                                                 <p style="color: green;"><?php echo $value['diachi'] ?></p>
                                             </div>
+                                            
+                                                <div class="row">
+                                                    <div class="slidecontainer" style=" display: flex;">
+                                                        <b style="width: 40%;">Vị trí:</b>
+                                                        <input type="range" min="0" max="10" value="10" class="slider" id="myRange" width="70%" style=" transform: translate(0px, -5px);">
+                                                        <p><span id="demo"></span></p>
+                                                    </div>
+                                                    <div class="slidecontainer" style=" display: flex;">
+                                                        <b style="width: 40%;">Chất lượng:</b>
+                                                        <input type="range" min="0" max="10" value="10" class="slider" id="myRange2" width="70%" style=" transform: translate(0px, -5px);">
+                                                        <p><span id="demo2"></span></p>
+                                                    </div>
+                                                    <div class="slidecontainer" style=" display: flex;">
+                                                        <b style="width: 40%;">Giá cả:</b>
+                                                        <input type="range" min="0" max="10" value="10" class="slider" id="myRange3" width="70%" style=" transform: translate(0px, -5px);">
+                                                        <p><span id="demo3"></span></p>
+                                                    </div>
+                                                    <div class="slidecontainer" style=" display: flex;">
+                                                        <b style="width: 40%;">Phục vụ:</b>
+                                                        <input type="range" min="0" max="10" value="10" class="slider" id="myRange4" width="70%" style=" transform: translate(0px, -5px);">
+                                                        <p><span id="demo4"></span></p>
+                                                    </div>
+                                                    <div class="slidecontainer" style=" display: flex;">
+                                                        <b style="width: 40%;">Không gian:</b>
+                                                        <input type="range" min="0" max="10" value="10" class="slider" id="myRange5" width="70%" style=" transform: translate(0px, -5px);">
+                                                        <p><span id="demo5"></span></p>
+                                                    </div>
+                                                </div>
+                                           
                                         </div>
+                                        <!-- javasrcrip_starts -->
+                                        <script>
+                                                        var slider = document.getElementById("myRange");
+                                                        var output = document.getElementById("demo");
+
+                                                        var slider2 = document.getElementById("myRange2");
+                                                        var output2 = document.getElementById("demo2");
+
+                                                        var slider3 = document.getElementById("myRange3");
+                                                        var output3 = document.getElementById("demo3");
+                                                        
+                                                        var slider4 = document.getElementById("myRange4");
+                                                        var output4 = document.getElementById("demo4");
+
+                                                        var slider5 = document.getElementById("myRange5");
+                                                        var output5 = document.getElementById("demo5");
+
+                                                        output.innerHTML = slider.value;
+                                                        slider.oninput = function() {
+                                                            output.innerHTML = this.value;
+                                                        }
+
+                                                        output2.innerHTML = slider2.value;
+                                                        slider2.oninput = function() {
+                                                            output2.innerHTML = this.value;
+                                                        }
+                                                        output3.innerHTML = slider3.value;
+                                                        slider3.oninput = function() {
+                                                            output3.innerHTML = this.value;
+                                                        }
+                                                        output4.innerHTML = slider4.value;
+                                                        slider4.oninput = function() {
+                                                            output4.innerHTML = this.value;
+                                                        }
+                                                        output5.innerHTML = slider5.value;
+                                                        slider5.oninput = function() {
+                                                            output5.innerHTML = this.value;
+                                                        }
+                                        </script>
+                                        <!-- javascrip_end -->
+
 
                                         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                                             <div class="container">
                                                 <div class="row">
 
-                                                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                                                        <div class="slidecontainer" style=" display: flex;">
-                                                            <p>Điểm:</p>
-                                                            <input type="range" min="0" max="10" value="10" class="slider" id="myRange" width="70%" style="margin: 0 10px 0 10px ; transform: translate(0px, -5px);">
-                                                            <p><span id="demo"></span></p>
-                                                        </div>
-                                                    </div>
-                                                    <script>
-                                                        var slider = document.getElementById("myRange");
-                                                        var output = document.getElementById("demo");
-                                                        output.innerHTML = slider.value;
-
-                                                        slider.oninput = function() {
-                                                            output.innerHTML = this.value;
-                                                        }
-                                                    </script>
+                                                    
+                                                    
 
                                                 </div>
                                             </div>

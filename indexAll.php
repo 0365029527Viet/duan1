@@ -18,8 +18,7 @@
                         if(is_array($checkuser)){
                             $_SESSION['user'] = $checkuser;
                             header('location:indexAll.php'); 
-                            echo "<script>alert('Đang nhập thành công.')</script>";
-                            
+                            echo "<script>alert('Đang nhập thành công.')</script>";                           
                             die;
                         }
                         else{

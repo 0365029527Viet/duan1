@@ -10,16 +10,25 @@
         $dn = pdo_query_one($sql);
         return $dn;
     }
+    function load_tk($id){
+        $sql = "select * from taikhoan where id = '$id'";
+        $dn = pdo_query_one($sql);
+        return $dn;
+    }
     // function qmk($email){
     //     $sql = "select * from taikhoan where email = '$email'";
     //     $dn = pdo_query_one($sql);
     //     return $dn;
     // }
-    // function update_tk($id,$user,$pass,$email,$diachi,$phone){
+    function update_tk($id,$name,$phone,$diachi,$mota){
         
-    //     $update = "update taikhoan set user='$user', pass='$pass', email='$email', diachi='$diachi', phone='$phone' where id='$id'";
-    //     pdo_query_one($update);
+        $update = "update taikhoan set name='$name',phone='$phone', address ='$diachi', mota= '$mota'  where id='$id'";
+        pdo_query_one($update);
         
-    // }
+    }
+    function update_avatar($id, $image){
+        $sql ="update taikhoan set img='$image' where id = '$id'";
+        pdo_execute($sql);
+    }
 
 ?>
