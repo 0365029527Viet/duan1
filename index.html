@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .menu {
+            background-color: rgb(212, 212, 212);
+            height: 1000px;
+        }
+
+        .home {
+            background-color: rgb(202, 202, 202);
+            height: 1000px;
+        }
+
+        .banner {
+            height: 130px;
+        }
+
+        .banner img {
+            margin-top: 10px;
+        }
+
+        .flex-column li a {
+            padding: 50px;
+            min-height: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <a href="#" onclick="openWindow()">Open</a>
+    <a href="#" onclick="closeWindow()">Close</a>
+    <a href="#" onclick="moveWindow()">Move</a>
+    <a href="#" onclick="resizeWindow()">Resize</a>
+    <script>
+        var windowChild;
+        function openWindow() {
+            windowChild = window.open('indexAll.php', "windowChild ", "width=700, height=700");
+            windowChild.location.href = 'indexAll.php';
+        }
+    </script>
+    <!-- <div class="test" style="width: 100px; height: 100px; background-color: rgb(255, 91, 91);">
+            
+            <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a>
+            <div class="modal fade" id="modal-id">
+                <div class="modal-dialog">
+                    <div class="modal-content"  style="width: 900px;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Viết bình luận</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="row">
+                                            <img src="image/foody-mobile-xoi-ran2-jpg-227-635775001980948985.jpg" alt="" width="100%">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <h3>bình luận</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Hoàn tất</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    <div>
+
+       <div class="container">
+            <div class="row">
+                
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" >
+                    <div class="slidecontainer ngang" >
+                        <p>Điểm: </p>
+                        <input type="range" min="0" max="10" value="10" class="slider" id="myRange">    
+                        <p><span id="demo"></span></p>
+                    </div>
+                </div>
+                
+            </div>
+       </div>
+
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function () {
+                output.innerHTML = this.value;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
