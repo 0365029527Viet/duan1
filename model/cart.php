@@ -8,16 +8,33 @@
                 return tongdonhang();
     }
     
-    function insert_bill($tenkhachhang,$phone,$diachi,$time,$pttt,$tongdonhang){
-        $sql ="insert into bill(tenuser,phone,diachi,time,pttt,tongdonhang) values ('$tenkhachhang','$phone','$diachi','$time','$pttt','$tongdonhang')";
+    function insert_bill($tenkhachhang,$phone,$iduser,$diachi,$madh,$pttt,$tongdonhang){
+        $sql ="insert into bill(madh,iduser,tenkhachhang,phone,diachi,pttt,tongtien) values ('$madh','$iduser','$tenkhachhang','$phone','$diachi','$pttt','$tongdonhang')";
         return pdo_execute_lastInsertId($sql);
     }
-    function insert_cart($id_user,$idpro,$tensp,$anh,$gia,$soluong,$thanhtien,$idbill){
-        $sql ="insert into cart(id_user,idpro,tensp,anh,gia,soluong,thanhtien,id_bill) values ('$id_user','$idpro','$tensp','$anh','$gia','$soluong','$thanhtien','$idbill')";
+    function addtocart($iddh,$idpro,$tensp,$image,$soluong,$dongia){
+        $sql ="insert into cart(iddh,idpro,tensp,image,soluong,dongia) values ('$iddh','$idpro','$tensp','$image','$soluong','$dongia')";
+        return pdo_execute_lastInsertId($sql);
     }
-    function load_onebill($idbill){
-        $sql = "select * from bill where id='$idbill'";
+    function insert_cart($tensp,$anh,$gia,$soluong){
+        $sql ="insert into bill(tensp,anh,gia,soluong,thanhtien) values ('$tensp','$anh','$gia','$soluong')";
+    }
+    function load_cart($iddh){
+        //load cho bảng table
+        $sql = "select * from cart where iddh='$iddh'";
         $resufl = pdo_query($sql);
         return $resufl;
     }
+    function load_bill($iddh){
+        //load cho thông tin người mua
+        
+        $sql = "select * from bill where id='$iddh'";
+        $resufl = pdo_query($sql);
+        return $resufl;
+    }
+    // function load_onebill($idbill){
+    //     $sql = "select * from bill where id='$idbill'";
+    //     $resufl = pdo_query($sql);
+    //     return $resufl;
+    // }
 ?>

@@ -14,6 +14,7 @@ session_start();
             
         }
         update_avatar($id,$image);
+        
     }
 ?>
 <!DOCTYPE html>

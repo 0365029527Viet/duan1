@@ -58,6 +58,13 @@
 
                     include "profile/trangcanhan.php";
                     break;
+                case 'danhmuc':
+                    if(isset($_GET['iddm'])){
+                        $id = $_GET['iddm'];
+                        
+                    }
+                    include "view/danhmuc.php";
+                    break;
                 default:
                     include "view/home.php";
                     break;

@@ -10,7 +10,7 @@ include "model/sanpham.php";
                     <i class="glyphicon glyphicon-cutlery"></i>
                     <a class="navbar-brand" href="#"></i>Giao hàng tận nơi</a>
                     <ul class="nav navbar-nav">
-                        <li><a href="">Tất cả</a></li>
+                        <li><a href="indexAll.php">Tất cả</a></li>
                         <?php
                         $rows = load_dm_admin();
                         foreach ($rows as $key => $value) {
@@ -31,7 +31,7 @@ include "model/sanpham.php";
 <div class="container">
     <div class="row" style="background-color: #fff;">
         <?php
-        $row = load_sp_limit();
+        $row = load_sp_dm($id);
         foreach ($row as $key => $value) {
 
         ?>
@@ -67,3 +67,4 @@ include "model/sanpham.php";
 <?php
 include "review.php";
 ?>
+

@@ -33,9 +33,6 @@
                     </h2> <br> <br>
                     <?php } ?>
                     <div class="list-group">
-                        <a href="" class="list-group-item" target="profile">
-                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                            Đơn hàng của bạn</a>
                         <a href="profile/thongtin.php" class="list-group-item" target="profile">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                             Thông tin cơ bản</a>

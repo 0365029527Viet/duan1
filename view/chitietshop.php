@@ -87,23 +87,88 @@
                             <b class="glyphicon glyphicon-pushpin" aria-hidden="true"></b> <?php echo $value['diachi'] ?>
                         </p>
                         <p>
-                            <a href="index.php?act=chitiet&&id=<?php echo $value['id'] ?>"> 
-                            <b class="glyphicon glyphicon-pencil" aria-hidden="true"></b>
-                             Xem nhận xét về sản phẩm</a>
+                            <a href="index.php?act=chitiet&&id=<?php echo $value['id'] ?>">
+                                <b class="glyphicon glyphicon-pencil" aria-hidden="true"></b>
+                                Xem nhận xét về sản phẩm</a>
                         </p>
                         <p style="font-size: 17px;">
                             <b class="glyphicon glyphicon-time" aria-hidden="true"></b> <?php echo $value['opentime'] ?> - <?php echo $value['closetime'] ?>
                         </p>
-                        <p style="font-size: 17px;">
-                            <b class="glyphicon glyphicon-tag"></b> <?php echo $value['gia'] ?>
+                        <p style="font-size: 17px; color: green;">
+                            <b class="glyphicon glyphicon-tag"></b> <?php echo $value['gia'] ?> VND
                         </p>
                         <p>
-                            <a href="" class="btn btn-primary text-center">Đặt hàng</a>
+                            <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Đặt hàng</a>
                         </p>
                     </div>
                 </div>
-            <?php  } ?>
+
+
+
+                <div class="modal fade" id="modal-id">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Đặt hàng</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <form action="index.php?act=giohang" method="post" enctype="multipart/form-data">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <img src="admin/admin_review/sanpham/img/<?php echo $value['anh'] ?>" alt="" width="100%" height="200">
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <b>
+                                                <h3 style="color: green; margin: 0;"><?php echo $value['tensp'] ?></h3>
+                                            </b>
+                                            <input type="hidden" name="idpro" value="<?php echo $value['id'] ?>">
+                                            <input type="hidden" name="tensp" value="<?php echo $value['tensp'] ?>">
+                                            <input type="hidden" name="anh" value="<?php echo $value['anh'] ?>">
+                                            <input type="hidden" name="gia" value="<?php echo $value['gia'] ?>">
+                                            <p style="font-size: 17px; color: red;">
+                                                Giá: <?php echo $value['gia'] ?> VND
+                                            </p>
+                                            <?php  } ?>
+                                            <p>
+                                                <b>
+                                                    Số lượng:
+                                                </b>
+                                                <input type="number" id="input" class="form-control" value="" min="{5" } max="" name="soluong">
+
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" name="dathang">Tiến hành đặt hàng</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            
         </div>
+        <?php
+
+            // if(isset($_POST['dathang'])){
+            //     $idpro = $_POST['idpro'];
+            //     $tensp = $_POST['tensp'];
+            //     $gia = $_POST['gia'];
+            //     $anh = $_POST['anh'];
+            //     $soluong = $_POST['soluong'];
+            //     $tt = $soluong*$gia;
+            //     $sp = [$idpro,$tensp,$gia,$soluong,$tt];
+            //     array_push($_SESSION['giohang'],$sp);
+            //     include "viewcart.php";
+            // }
+            
+        ?>
     </div> <br>
     <div class="container">
         <div class="row">
@@ -118,7 +183,7 @@
             </div>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-               
+
             </div>
 
 

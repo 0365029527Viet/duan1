@@ -105,7 +105,7 @@
                         <li><a href="#">Thử quán mới</a></li>
                         <li><a href="#">Đặt đồ ăn</a></li>
                         <li><a href="#">Đang khuyến mãi</a></li>
-                        <li><a href="#">Vừa đặt gần đây</a></li>
+                        <li><a href="index.php?act=donhang">Vừa đặt gần đây</a></li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -147,11 +147,9 @@
 
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ngôn ngữ <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Vietnamese</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
+                            <a href="index.php?act=giohang" style="font-size: 20px; color: red; margin: 0 10px 0 0;">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            </a>
                         </li>
                     </ul>
                 </div>

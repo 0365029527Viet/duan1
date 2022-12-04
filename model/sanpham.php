@@ -39,23 +39,28 @@
         return $resufl;
     }
 
-    function load_sp_doan(){
-        $sql = "select * from spReview where iddm=10";
+    // function load_sp_doan(){
+    //     $sql = "select * from spReview where iddm=10";
+    //     $resufl = pdo_query($sql);
+    //     return $resufl;
+    //     //load sản phẩm đồ ăn
+    // }
+    // function load_sp_douong(){
+    //     $sql = "select * from spReview where iddm=9";
+    //     $resufl = pdo_query($sql);
+    //     return $resufl;
+    //     //load sản phẩm đồ uống
+    // }
+    // function load_sp_banhkem(){
+    //     $sql = "select * from spReview where iddm=12";
+    //     $resufl = pdo_query($sql);
+    //     return $resufl;
+    //     //load sản phẩm bánh kem
+    // }
+    function load_sp_dm($id){
+        $sql = "select * from spReview where iddm=$id";
         $resufl = pdo_query($sql);
         return $resufl;
-        //load sản phẩm đồ ăn
-    }
-    function load_sp_douong(){
-        $sql = "select * from spReview where iddm=9";
-        $resufl = pdo_query($sql);
-        return $resufl;
-        //load sản phẩm đồ uống
-    }
-    function load_sp_banhkem(){
-        $sql = "select * from spReview where iddm=12";
-        $resufl = pdo_query($sql);
-        return $resufl;
-        //load sản phẩm bánh kem
     }
     // function loadall_tk(){
     //     $sql = "select danhmuc.id as madm, danhmuc.tendanhmuc as tendm, count(sanpham.id) as countsp, min(sanpham.gia) as mingia ,max(sanpham.gia) as maxgia, avg(sanpham.gia) as giatb from sanpham left join danhmuc on danhmuc.id=sanpham.iddm
